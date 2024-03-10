@@ -2,12 +2,10 @@
 # -*- coding: utf-8 -*-
 
 '''
-SR04_dataSave.py
 
 HY-SRF05超音波距離センサモジュールを使い、距離を測定しファイルに保存します。
 
-0.05秒毎に4回計測して、最後の値をとる。計測は1回のみ
-(平均を取ったり、最大最少をのぞいて平均したり色々考えられる)
+0.5秒毎に10回計測して、表示
 
 書き出しファイル
     dist_data.txt
@@ -16,21 +14,8 @@ HY-SRF05超音波距離センサモジュールを使い、距離を測定しフ
 by.kawabata
 
 2024/02/27  pi5のためgpiozeroに置き換え
+2024/03/10  修正
 '''
-
-"""
-ガイド通りなのだが、うまく動作しない
-
-from gpiozero import DistanceSensor
-import time
-
-sensor = DistanceSensor(23, 24)
-
-for _ in range(5):
-    print('Distance to nearest object is', sensor.distance, 'm')
-    time.sleep(1)
-
-"""
 
 from gpiozero import Button,LED
 
@@ -70,7 +55,7 @@ def pulseIn( start=1, end=0):
 
 # 距離計測
 def calc_distance(num, v=34000): 
-    distance =[0,0,0]
+    distance =[0,0,0,0,0,0,0,0,0,0,0,0,0]
     for i in range(num):
         # TRIGピンを0.3[s]だけLOW
         # GPIO.output(TRIG_PIN, GPIO.LOW)
@@ -88,19 +73,21 @@ def calc_distance(num, v=34000):
         # 距離[cm] = 音速[cm/s] * 時間[s]/2
         distance[i] = v * t/2
         # print(distance, "cm")
-        time.sleep(0.05)
+        time.sleep(0.2)
+        print('Distance: ', int(distance[i]*10)/10,"cm")
     # ピン設定解除
     # GPIO.cleanup()
-    print(distance)
+    # print(distance)
     dis_ave = sum(distance)/len(distance)
-    return int(dis_ave*10)/10
-
+    # return int(dis_ave*10)/10
+    return int(distance[i]*10)/10
 
 def main():
     # 距離計測(TRIGピン番号, ECHO_PIN番号, 計測回数, 音速[cm/s])
     # dist = calc_distance(TRIG_PIN, ECHO_PIN, 3, 34000)
-    dist = calc_distance( 3, 34000)
-    print(dist)
+    dist = calc_distance( 10, 34000)
+    print("最終距離",dist,"cm")
+    # print(dist)
     #
     # 0.05秒毎に4回計測して、最後の値をとる
     # 
