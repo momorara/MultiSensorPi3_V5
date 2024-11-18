@@ -49,3 +49,7 @@ Released under the MIT license です。
 
 <h4><<アップデート>></h4>
 no data<br>
+
+<h4><<サポート窓口>></h4>
+  メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
+  資料等を修正中ですが、ご注意ください。<br>
