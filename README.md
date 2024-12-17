@@ -27,6 +27,9 @@ git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 ラズパイ5(Bookworm)ではNode-Red未対応です。<br>
 python3ベースのプログラムでラズパイ5対応としています。<br>
 ただし、Bullseye、Busterでも動作します。<br>
+説明資料は
+https://github.com/momorara/MultiSensorPi3
+を見てください。
 
 <h4><<使用方法>></h4>
 git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
