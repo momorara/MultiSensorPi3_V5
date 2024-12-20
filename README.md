@@ -30,6 +30,7 @@ python3ベースのプログラムでラズパイ5対応としています。<br
 説明資料は
 https://github.com/momorara/MultiSensorPi3
 を見てください。
+ただし、組み立て説明のみこちらの書類を見てください。
 
 <h4><<使用方法>></h4>
 git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
@@ -51,7 +52,7 @@ Released under the MIT license です。
 プログラム自体はサンプルプログラムです。
 
 <h4><<アップデート>></h4>
-no data<br>
+2024/12/20　組み立て説明(連結ピンソケットタイプ)を追加<br>
 
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
