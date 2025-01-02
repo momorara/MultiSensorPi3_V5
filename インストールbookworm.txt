@@ -26,6 +26,10 @@ b.c.は両方仮想環境みたいですが、今後の事を考えるとb.の�
  venvって方式らしい。
 
 
+プログラムをダウンロード
+git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT
+
+
 仮想環境の作り方 今回の仮想環境の名前はV_MS5とします。
 1. 仮想環境を作る
 python -m venv V_MS5 --system-site-packages
@@ -97,10 +101,8 @@ python3 BMP280_bookworm.py
 deactivate
 
 
-プログラムをダウンロード
-git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT
 
-
+その他サンプルプログラムを実行も可能
 
 source V_MS5/bin/activateとして仮想環境に入り
 
