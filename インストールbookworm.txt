@@ -85,7 +85,6 @@ python3 AHTx0_dataSave03.py
 
 BMP280に必要なライブラリをイントール
 pip3 install bmp280
-git clone https://github.com/pimoroni/bmp280-python いらない?
 python3 BMP280_bookworm.py
 として、温度と気圧が表示されればＯＫ
 (例)
