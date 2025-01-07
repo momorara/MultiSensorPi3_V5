@@ -1,5 +1,5 @@
 # MultiSensorPi3_V5
-MultiSensorPi3 for Pi5
+MultiSensorPi3 for Pi5 / BookWorm版
 
 <h4><<概要>></h4>
 　ラズパイを手に入れて、Ｌチカとかやってみたけれど、さて次は何をしようと悩んでいたら、センサーをやってみましょう。<br>
@@ -38,8 +38,7 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 インストールについては、インストール文書に従いインストールを行ってください。<br>
 
 <h4><<動作環境>></h4>  作成中
-2024/3/5 対応OS：Bullseye版11.9、BookWorm版12.5(一部機能)での動作を確認しています。<br>
-2024/3/7 対応OS：Buster版10.13での動作を確認しています。<br>
+202501/07 対応OS：Bullseye版11.11、BookWorm版12.8(一部機能)での動作を確認しています。<br>
    
 <h4><<使用説明資料>></h4>  作成中
 説明書類の中の資料を確認ください。
