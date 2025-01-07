@@ -1,6 +1,6 @@
 2024/04/16　BookWormでのインストール手順 BookWorm 12.5で確認
 2024/07/30  BookWorm 12.6で確認
-2025/01/02  Bookwprm 12.8で確認
+2025/01/07  Bookwprm 12.8で確認
 
 AHT30  温度、湿度
 BMP280 気圧
