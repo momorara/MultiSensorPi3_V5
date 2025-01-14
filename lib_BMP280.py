@@ -1,3 +1,9 @@
+"""
+smbus2がインストールされていない場合、
+pip3 install smbus2 としてインストールしてください。
+
+2025/01/14  1回目の測定では低い値になるので、その場合2回目を採用する
+"""
 from smbus2 import SMBus
 import time
 
@@ -61,7 +67,7 @@ class BMP280:
         self.bus.write_byte_data(self.i2c_address, 0xF4, 0x27)  # 通常動作モード
         self.bus.write_byte_data(self.i2c_address, 0xF5, 0xA0)  # フィルタ設定
 
-    def read_sensor_data(self):
+    def read_sensor_data_0(self):
         """
         センサーから温度と気圧を取得する
         :return: 温度(°C)と気圧(hPa)のタプル
@@ -94,6 +100,14 @@ class BMP280:
             pressure = ((p + var1 + var2) >> 8) + (self.calibration_data["dig_P7"] << 4)
 
         return temperature / 100.0, pressure / 25600.0
+
+    # 1回目の測定では低い値になるので、その場合2回目を採用する
+    def read_sensor_data(self):
+        temp, press = self.read_sensor_data_0()
+        if press < 980:
+            time.sleep(1)
+            temp, press = self.read_sensor_data_0()
+        return temp, press
 
 
 def main():
