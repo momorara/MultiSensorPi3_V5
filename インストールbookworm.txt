@@ -1,10 +1,9 @@
 2024/04/16　BookWormでのインストール手順 BookWorm 12.5で確認
 2024/07/30  BookWorm 12.6で確認
 2025/01/07  Bookwprm 12.8で確認
-2025/01/12  AHT30,BMP280をAdafruitのライブラリを使わずに使用することで、
+2025/01/16  AHT30,BMP280をAdafruitのライブラリを使わずに使用することで、
 インストールを簡単にしました。
 (旧版を使用する際はOLDを使ってください。)
-
 
 
 I2cを有効化
@@ -12,7 +11,7 @@ sudo raspi-config
 にてi2cを有効にしてください。
 
 プログラムのダウンロード
-git clone https://github.com/momorara/MultiSensorPi3 sensorHAT
+git clone https://github.com/momorara/MultiSensorPi3?V5 sensorHAT
 
 プログラムのディレクトリへ移動
 cd sensorHAT
