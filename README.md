@@ -43,6 +43,7 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 <h4><<使用説明資料>></h4>  作成中
 説明書類の中の資料を確認ください。
 お問い合わせに関しては、サポート.txtを参照ください。
+2025/01/21　Node-REDの状況を追加しました。<br>
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。
@@ -52,6 +53,7 @@ Released under the MIT license です。
 
 <h4><<アップデート>></h4>
 2024/12/20　組み立て説明(連結ピンソケットタイプ)を追加<br>
+
 
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
