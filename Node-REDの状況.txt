@@ -1,0 +1,70 @@
+Node-RED インストールについて v0.1
+
+2025/01/21
+
+Bookworm 12.8
+
+BookwormでのNode-RED インストールについてはまだ問題があります。
+Node-RED core　4.0.8
+v20.18.1 Npm 10.8.2
+
+
+1.インストール自体は普通に行えます。
+
+Node-RED インストールについて
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+・何か聞いてくるけど、2回とも y で進める
+・少し時間がかかります。
+・最後に色々聞いてくるけど、そのままdefultでエンターかNoで良いと思います。
+・高度な使い方やセキュリティを高めたい人はyesだったりしますが、本基板を使うレベルでは不要と考えます。
+
+node-red-pi --max-old-space-size=256 としてnode-redを立ち上げて、
+ブラウザで「http://ipアドレス:1880/」としてnode-redの編集画面を開きます。
+そこで、パレットの管理で次の2つのノードを追加してください。
+node-red-dashboard	UI用のフロー
+node-red-contrib-calc	計算用のフロー
+をパレットの管理で追加する。
+
+***センサーui用のフローを読み込む
+flows.json
+
+***cronの設定
+crontab - pi.txtの内容をcrontab -e で、コピペする。
+
+reboot
+
+flows.jsonとcrontab - pi.txtは、
+https://github.com/momorara/MultiSensorPi3 にあります。
+
+-------------------------------------------------------
+ここまでは、billseyeと同じですが、GPIO関係の制御で問題があります。
+まず、Node-REDが立ち上がっている状態では、GPIOの制御をNode-REDがとるので、
+PythonでGPIOを制御しようとすると
+lgpio.error: 'GPIO busy'
+となります。
+
+ダッシュボードの動作状況は、
+・センサー状況は正常に表示されます。
+・SR04による距離測定は	タイムアウト
+・LEDのon,off		正常
+・LEDのゆっくり点滅	できない
+・SWの状態は		正常
+・明暗センサーは		正常
+・傾きセンサーは		正常
+・赤外線受信は		できない。
+
+この時
+pythonでの動作
+・test_SR04_V4.py	正常
+・test_LED.py		ダメ
+・test_sw.py 		ダメ
+・test_iR.py 		正常
+・test_tilt.py 		ダメ
+・breathing_LED1.py　	ダメ 
+・breathing_LED2.py　	ダメ
+・test_Cds.py 		ダメ
+
+以上のことからpythonプログラムを改造してデータの受け渡しを考えれば、
+距離測定と赤外線受信は対応できそうだが、
+ゆっくり点滅はできないかも
