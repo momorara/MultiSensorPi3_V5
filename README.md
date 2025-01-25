@@ -54,6 +54,8 @@ Released under the MIT license です。<br>
 <h4><<アップデート>></h4>
 2024/12/20　組み立て説明(連結ピンソケットタイプ)を追加<br>
 
+サポートコミュニティー　https://www.facebook.com/groups/3773038759434230<br>
+
 
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
