@@ -38,7 +38,8 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 インストールについては、インストール文書に従いインストールを行ってください。<br>
 
 <h4><<動作環境>></h4>  作成中
-202501/07 対応OS：Bullseye版11.11、BookWorm版12.8(一部機能)での動作を確認しています。<br>
+2025/01/07 対応OS：Bullseye版11.11、BookWorm版12.8(一部機能)での動作を確認しています。<br>
+2025/02/17 対応OS：BookWorm版12.9(一部機能)での動作を確認しています。<br>
    
 <h4><<使用説明資料>></h4> 
 説明書類の中の資料を確認ください。<br>
