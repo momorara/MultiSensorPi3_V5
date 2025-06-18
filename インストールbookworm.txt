@@ -11,7 +11,7 @@ sudo raspi-config
 にてi2cを有効にしてください。
 
 プログラムのダウンロード
-git clone https://github.com/momorara/MultiSensorPi3?V5 sensorHAT
+git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT
 
 プログラムのディレクトリへ移動
 cd sensorHAT
