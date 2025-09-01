@@ -63,3 +63,12 @@ Released under the MIT license です。<br>
 <h4><<サポート窓口>></h4>
   メールアドレスが　tkj-works@mbr.nifty.com に変更になっています。<br>
   資料等を修正中ですが、ご注意ください。<br>
+
+
+<br>
+-------------------------------------------<br>
+基板の販売について、以下のショップにて扱っています。<br>
+BASEショップ<br>
+https://raspi.thebase.in/<br>
+スイッチサイエンス<br>
+https://www.switch-science.com/search?q=tkj<br>
