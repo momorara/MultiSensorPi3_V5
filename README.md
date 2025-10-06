@@ -1,5 +1,7 @@
 # MultiSensorPi3_V5
-MultiSensorPi3 for Pi5 / BookWorm版
+BookWorm版以降のOSに対応する文書になります。
+BookWorm版以降のOSについては、Node-REDは非対応とします。
+サンプルプログラムはpython3で実行するものとします。
 
 <h4><<概要>></h4>
 　ラズパイを手に入れて、Ｌチカとかやってみたけれど、さて次は何をしようと悩んでいたら、センサーをやってみましょう。<br>
@@ -25,8 +27,8 @@ MultiSensorPi3 for Pi5 / BookWorm版
 git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 にてNode-REDで動作します。<br>
 
-ラズパイ5(Bookworm)ではNode-Red未対応です。<br>
-python3ベースのプログラムでラズパイ5対応としています。<br>
+Bookworm以降ではNode-Red未対応です。<br>
+python3ベースのプログラムで対応としています。<br>
 ただし、Bullseye、Busterでも動作します。<br>
 説明資料は<br>
 https://github.com/momorara/MultiSensorPi3<br>
@@ -41,13 +43,14 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 <h4><<動作環境>></h4>
 2025/01/07 対応OS：Bullseye版11.11、BookWorm版12.8(一部機能)での動作を確認しています。<br>
 2025/02/17 対応OS：BookWorm版12.9(一部機能)での動作を確認しています。<br>
-2025/03/26 対応OS：BookWorm版12.10/64bit(一部機能)での動作を確認しています。<br>
-2025/06/18 対応OS：Bookworm版12.11/64bit(一部機能)での動作を確認しています。<br>
+2025/03/26 対応OS：BookWorm版12.10/64bitでの動作を確認しています。<br>
+2025/06/18 対応OS：Bookworm版12.11/64bitでの動作を確認しています。<br>
+2025/10/06 対応OS：Bookworm版12.12/64bitでの動作を確認しています。<br>
    
 <h4><<使用説明資料>></h4> 
 説明書類の中の資料を確認ください。<br>
 お問い合わせに関しては、サポート.txtを参照ください。****<br>
-2025/01/21　Node-REDの状況を追加しました。<br>
+
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。<br>
