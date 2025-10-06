@@ -21,9 +21,10 @@ MultiSensorPi3 for Pi5 / BookWorm版
 ・ラズパイは付属しません。<br>
 <br>
 *MultiSensorPi3_V5の位置付け<br>
-ラズパイ4までは、
+ラズパイ4までは、Bullseye11.11で<br>
 git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
-にてNode-REDで動作しますが、<br>
+にてNode-REDで動作します。<br>
+
 ラズパイ5(Bookworm)ではNode-Red未対応です。<br>
 python3ベースのプログラムでラズパイ5対応としています。<br>
 ただし、Bullseye、Busterでも動作します。<br>
