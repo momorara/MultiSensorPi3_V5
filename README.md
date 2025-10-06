@@ -27,9 +27,9 @@ BookWorm版以降のOSについては、Node-REDは非対応とします。
 git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 にてNode-REDで動作します。<br>
 
-Bookworm以降ではNode-Red未対応です。<br>
+Bookworm以降ではNode-Red非対応です。<br>
 python3ベースのプログラムで対応としています。<br>
-ただし、Bullseye、Busterでも動作します。<br>
+本プログラムはBullseye、Busterでも動作します。<br>
 説明資料は<br>
 https://github.com/momorara/MultiSensorPi3<br>
 を見てください。<br>
