@@ -48,6 +48,7 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 2025/03/26 対応OS：BookWorm版12.10/64bitでの動作を確認しています。<br>
 2025/06/18 対応OS：Bookworm版12.11/64bitでの動作を確認しています。<br>
 2025/10/06 対応OS：Bookworm版12.12/64bitでの動作を確認しています。<br>
+2025/10/06 対応OS：Trixie版 13.1/64bitでの動作を確認しています。<br>
    
 <h4><<使用説明資料>></h4> 
 説明書類の中の資料を確認ください。<br>
