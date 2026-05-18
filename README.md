@@ -52,6 +52,7 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 2025/11/17 対応OS：Trixie版13.2(64bit)にて動作確認しました。<br>
 2026/01/28 対応OS：Trixie版13.3(64bit)にて動作確認しました。<br>
 2026/03/19 対応OS：Trixie版13.4(64bit)にて動作確認しました。<br>
+2026/05/18 対応OS：Trixie版13.5(64bit)にて動作確認しました。<br>
  
 <h4><<使用説明資料>></h4> 
 説明書類の中の資料を確認ください。<br>
