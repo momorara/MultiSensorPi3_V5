@@ -1,6 +1,6 @@
 # MultiSensorPi3_V5
 BookWorm版以降のOSに対応する文書になります。
-BookWorm版以降のOSについては、Node-REDは非対応とします。
+本リポジトリでは、Node-REDは非対応のプログラムを保存します。
 サンプルプログラムはpython3で実行するものとします。
 
 <h4><<概要>></h4>
@@ -27,9 +27,9 @@ BookWorm版以降のOSについては、Node-REDは非対応とします。
 git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 にてNode-REDで動作します。<br>
 
-Bookworm以降ではNode-Red非対応です。<br>
+本リポジトリではNode-Red非対応です。<br>
 python3ベースのプログラムで対応としています。<br>
-本プログラムはBullseye、Busterでも動作します。<br>
+本プログラムはBullseye、Buster、Trixieでも動作します。<br>
 説明資料は<br>
 https://github.com/momorara/MultiSensorPi3<br>
 を見てください。<br>
