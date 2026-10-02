@@ -1,0 +1,1081 @@
+[
+    {
+        "id": "4bcd92b05f6fae97",
+        "type": "tab",
+        "label": "LED+SW-03",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f8c102dfa3ca9717",
+        "type": "rpi-gpio in",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "pin": "6",
+        "intype": "down",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "abf5862a524de80b"
+            ]
+        ]
+    },
+    {
+        "id": "b29e95f2b853c477",
+        "type": "inject",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1210,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a64386c0633830b4",
+        "type": "inject",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1210,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f80e81475dbf4b25",
+        "type": "ui_button",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "group": "66095ad.a851fa4",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "1-LED 5秒on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "e45a621825f756b7"
+            ]
+        ]
+    },
+    {
+        "id": "86a7b0943d417c21",
+        "type": "ui_switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "label": "switch-1",
+        "tooltip": "",
+        "group": "66095ad.a851fa4",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 720,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abf5862a524de80b",
+        "type": "switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "015e9c8d591a2c96"
+            ],
+            [
+                "2c700b9c7989a109"
+            ]
+        ]
+    },
+    {
+        "id": "015e9c8d591a2c96",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "86a7b0943d417c21"
+            ]
+        ]
+    },
+    {
+        "id": "2c700b9c7989a109",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "86a7b0943d417c21"
+            ]
+        ]
+    },
+    {
+        "id": "b81b1fd2cd798c85",
+        "type": "inject",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1170,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51dfa77693cbee61",
+        "type": "inject",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1210,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62999cd5d5f52910",
+        "type": "ui_button",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "group": "66095ad.a851fa4",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "2-LED 5秒on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "125ce95d0f836f59"
+            ]
+        ]
+    },
+    {
+        "id": "9a3b8440efb028d7",
+        "type": "inject",
+        "z": "4bcd92b05f6fae97",
+        "name": "起動時",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "dc87c624824fe32c"
+            ]
+        ]
+    },
+    {
+        "id": "dc87c624824fe32c",
+        "type": "template",
+        "z": "4bcd92b05f6fae97",
+        "name": "初期値 off 設定",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "0",
+        "output": "str",
+        "x": 440,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d6088566de93a66",
+        "type": "rpi-gpio in",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "pin": "5",
+        "intype": "down",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 200,
+        "y": 660,
+        "wires": [
+            [
+                "b10a1547eadbd3b4"
+            ]
+        ]
+    },
+    {
+        "id": "dba085201073e58d",
+        "type": "ui_switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "label": "switch-2",
+        "tooltip": "",
+        "group": "66095ad.a851fa4",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "x": 720,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b10a1547eadbd3b4",
+        "type": "switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "7c3295d6be1828e5"
+            ],
+            [
+                "22c6ff866c7bbaa2"
+            ]
+        ]
+    },
+    {
+        "id": "7c3295d6be1828e5",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 640,
+        "wires": [
+            [
+                "dba085201073e58d"
+            ]
+        ]
+    },
+    {
+        "id": "22c6ff866c7bbaa2",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "dba085201073e58d"
+            ]
+        ]
+    },
+    {
+        "id": "2bc5c64f217bda65",
+        "type": "ui_slider",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "label": "点滅回数",
+        "tooltip": "",
+        "group": "66095ad.a851fa4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "1",
+        "max": 10,
+        "step": 1,
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "6278f21f66b2b9a5"
+            ]
+        ]
+    },
+    {
+        "id": "6278f21f66b2b9a5",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "set LED_n",
+        "rules": [
+            {
+                "t": "set",
+                "p": "LED_n",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d556e7bdebb8a5c",
+        "type": "ui_button",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "group": "66095ad.a851fa4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "1-LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "668d0f5bdf51f396"
+            ]
+        ]
+    },
+    {
+        "id": "6d8f244fc64420e4",
+        "type": "exec",
+        "z": "4bcd92b05f6fae97",
+        "command": "python3 /home/pi/sensorHAT/breathing_led_sensorHAT.py -LED 27 -start 0 -step 5 ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 950,
+        "y": 420,
+        "wires": [
+            [
+                "8a58e31d4896e4d5"
+            ],
+            [
+                "8a58e31d4896e4d5"
+            ],
+            [
+                "8a58e31d4896e4d5"
+            ]
+        ]
+    },
+    {
+        "id": "668d0f5bdf51f396",
+        "type": "template",
+        "z": "4bcd92b05f6fae97",
+        "name": "回数をセット",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "-stop {{flow.LED_n}}",
+        "output": "str",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "6d8f244fc64420e4"
+            ]
+        ]
+    },
+    {
+        "id": "97fd881466826a1c",
+        "type": "ui_button",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "group": "66095ad.a851fa4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "2-LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "b810aa35cb93307f"
+            ]
+        ]
+    },
+    {
+        "id": "22858442640b7745",
+        "type": "exec",
+        "z": "4bcd92b05f6fae97",
+        "command": "python3 /home/pi/sensorHAT/breathing_led_sensorHAT.py -LED 17 -start 0 -step 5 ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b810aa35cb93307f",
+        "type": "template",
+        "z": "4bcd92b05f6fae97",
+        "name": "回数をセット",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "-stop {{flow.LED_n}}",
+        "output": "str",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "22858442640b7745"
+            ]
+        ]
+    },
+    {
+        "id": "8a58e31d4896e4d5",
+        "type": "debug",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "657d0182c54ef889",
+        "type": "rpi-gpio in",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "pin": "21",
+        "intype": "down",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 200,
+        "y": 780,
+        "wires": [
+            [
+                "97b0fdf8bffced9b"
+            ]
+        ]
+    },
+    {
+        "id": "97b0fdf8bffced9b",
+        "type": "switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "6ce5c0d937c32bda"
+            ],
+            [
+                "524d36ed204e5c82"
+            ]
+        ]
+    },
+    {
+        "id": "6ce5c0d937c32bda",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "明るい",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 760,
+        "wires": [
+            [
+                "3fc145a75bc02c3a",
+                "edd6c11803fd466c"
+            ]
+        ]
+    },
+    {
+        "id": "524d36ed204e5c82",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "暗い",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 800,
+        "wires": [
+            [
+                "3fc145a75bc02c3a",
+                "edd6c11803fd466c"
+            ]
+        ]
+    },
+    {
+        "id": "f3647fa3ad069914",
+        "type": "comment",
+        "z": "4bcd92b05f6fae97",
+        "name": "cds",
+        "info": "",
+        "x": 170,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "3fc145a75bc02c3a",
+        "type": "ui_text",
+        "z": "4bcd92b05f6fae97",
+        "group": "66095ad.a851fa4",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "明暗センサー",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6253ede8dc0d377b",
+        "type": "comment",
+        "z": "4bcd92b05f6fae97",
+        "name": "SW",
+        "info": "",
+        "x": 170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "830a9d1b65fc679b",
+        "type": "comment",
+        "z": "4bcd92b05f6fae97",
+        "name": "LED",
+        "info": "",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "edd6c11803fd466c",
+        "type": "debug",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f66980100772ab48",
+        "type": "rpi-gpio in",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "pin": "26",
+        "intype": "down",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 200,
+        "y": 880,
+        "wires": [
+            [
+                "e20c9aa464b92ffb"
+            ]
+        ]
+    },
+    {
+        "id": "e20c9aa464b92ffb",
+        "type": "switch",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "25296220dfdf2031"
+            ],
+            [
+                "2665193f40af69ea"
+            ]
+        ]
+    },
+    {
+        "id": "25296220dfdf2031",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "水平",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "ac302ed5ed898552",
+                "044adbb0de3f316a"
+            ]
+        ]
+    },
+    {
+        "id": "2665193f40af69ea",
+        "type": "change",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "傾いてる",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "ac302ed5ed898552",
+                "044adbb0de3f316a"
+            ]
+        ]
+    },
+    {
+        "id": "cc11676f0a38e738",
+        "type": "comment",
+        "z": "4bcd92b05f6fae97",
+        "name": "傾きセンサー",
+        "info": "",
+        "x": 190,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ac302ed5ed898552",
+        "type": "ui_text",
+        "z": "4bcd92b05f6fae97",
+        "group": "66095ad.a851fa4",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "傾きセンサー",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 740,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "044adbb0de3f316a",
+        "type": "debug",
+        "z": "4bcd92b05f6fae97",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "e45a621825f756b7",
+        "type": "exec",
+        "z": "4bcd92b05f6fae97",
+        "command": "python3 /home/pi/sensorHAT/LED-1-on.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "125ce95d0f836f59",
+        "type": "exec",
+        "z": "4bcd92b05f6fae97",
+        "command": "python3 /home/pi/sensorHAT/LED-2-on.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66095ad.a851fa4",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "16e2d8b3.eadb37",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "16e2d8b3.eadb37",
+        "type": "ui_tab",
+        "name": "LED+SW",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "af33d207eb11492d",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-node-pi-gpio": "2.0.7",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

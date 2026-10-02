@@ -1,0 +1,13 @@
+# node-redを常駐させる 
+@reboot node-red-pi --max-old-space-size=256
+
+# 使っていないセンサーはコメントとしてください。
+* * * * * sleep  2 && python3 /home/pi/sensorHAT/BMP280_dataSave04.py
+* * * * * sleep 45 && python3 /home/pi/sensorHAT/AHTx0_dataSave04.py
+* * * * * sleep 22 && python3 /home/pi/sensorHAT/iR_code_recive.py
+
+# logが溜まりすぎると心配なので、定期的に消す
+# 毎週月曜日21:** リネーム
+30 21 * * 2 mv /home/pi/sensorHAT/temp_data.txt     /home/pi/sensorHAT/temp_data.bak
+30 21 * * 2 mv /home/pi/sensorHAT/humdy_data.txt     /home/pi/sensorHAT/humdy_data.bak
+30 21 * * 2 mv /home/pi/sensorHAT/press_data.txt     /home/pi/sensorHAT/press_data.bak
