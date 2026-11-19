@@ -1,7 +1,9 @@
 # MultiSensorPi3_V5
-BookWorm版以降のOSに対応する文書になります。
-本リポジトリでは、Node-REDは非対応のプログラムを保存します。
-サンプルプログラムはpython3で実行するものとします。
+ラズパイ5専用のプログラムとなっています。<br>
+BookWorm版以降のOSに対応する文書になります。<br>
+本リポジトリでは、Node-REDは非対応のプログラムを保存します。<br>
+python3ベースのプログラムで対応としています。<br>
+サンプルプログラムはpython3で実行するものとします。<br>
 
 <h4><<概要>></h4>
 　ラズパイを手に入れて、Ｌチカとかやってみたけれど、さて次は何をしようと悩んでいたら、センサーをやってみましょう。<br>
@@ -23,12 +25,11 @@ BookWorm版以降のOSに対応する文書になります。
 ・ラズパイは付属しません。<br>
 <br>
 *MultiSensorPi3_V5の位置付け<br>
-ラズパイ4までは、Bullseye11.11で<br>
+ラズパイ4までの機種に関しては、Bullseye11.11で<br>
 git clone https://github.com/momorara/MultiSensorPi3 sensorHAT<br>
 にてNode-REDで動作します。<br>
 
-本リポジトリではNode-Red非対応です。<br>
-python3ベースのプログラムで対応としています。<br>
+
 本プログラムはBullseye、Buster、Trixieでも動作します。<br>
 説明資料は<br>
 https://github.com/momorara/MultiSensorPi3<br>
@@ -59,7 +60,6 @@ git clone https://github.com/momorara/MultiSensorPi3_V5 sensorHAT<br>
 <h4><<使用説明資料>></h4> 
 説明書類の中の資料を確認ください。<br>
 お問い合わせに関しては、サポート.txtを参照ください。****<br>
-
 
 <h4><<ライセンス>></h4>
 使用しているライブラリについては、ライブラリ制作者のライセンス規定を参照ください。<br>
