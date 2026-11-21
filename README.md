@@ -1,3 +1,7 @@
+# このページはラズパイ5用に用意しましたが、<br>
+https://github.com/momorara/MultiSensorPi3 <br>
+#に統合しましたので、こちらのページはいずれ閉鎖いたします。<br>
+
 # MultiSensorPi3_V5
 ラズパイ5専用のプログラムとなっています。<br>
 BookWorm版以降のOSに対応する文書になります。<br>
